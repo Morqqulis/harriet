@@ -3,151 +3,129 @@
 @use '../../base/mixins' as *;
 
 .hero {
-	position: relative;
-	min-height: 100vh;
+	// @include adaptiveValue('gap', 156, 100, 1300, 1024);
 	display: flex;
 	align-items: center;
-	padding-top: rem(176);
-	
-	// .hero__images
+	@media (max-width: $tablet) {
+		flex-direction: column;
+	}
+	&__container {
+		width: 100%;
+
+		@media (max-width: $tablet) {
+			width: auto;
+		}
+	}
 	&__images {
-		position: absolute;
-		top: 0;
-		left: 0;
+		max-width: rem(826);
+		position: relative;
 		width: 100%;
 		height: 100%;
-		z-index: 1;
+
+		@media (max-width: $tablet) {
+			display: flex;
+			justify-content: center;
+			max-width: 100%;
+		}
+
+		@media (max-width: $mobile) {
+			max-width: 100%;
+         flex-direction: column;
+		}
+
+
 	}
-	
-	// .hero__img
+
 	&__img {
-		position: absolute;
-		object-fit: cover;
-		
-		&--first {
-			width: rem(657);
-			height: rem(712);
-			top: 0;
-			left: 0;
-		}
-		
-		&--second {
-			width: rem(500);
-			height: rem(709);
-			top: rem(113);
-			right: rem(326);
-		}
-	}
-	
-	// .hero__container
-	&__container {
-		position: relative;
-		z-index: 2;
-		display: flex;
-		justify-content: center;
 		width: 100%;
+		height: auto;
 	}
-	
-	// .hero__content
+
+	&__img--first {
+		max-width: rem(657);
+		@include adaptiveValue('max-width', 657, 425, 1480, 1024, 2);
+
+		@media (max-width: $tablet) {
+			max-width: 100%;
+		}
+	}
+
+	&__img--second {
+		max-width: rem(500);
+		position: relative;
+		z-index: 1;
+		margin-top: rem(-590);
+		margin-left: rem(323);
+		@media (max-width: rem(1480)) {
+			@include adaptiveValue('margin-top', -590, -375, 1480, 1024);
+			@include adaptiveValue('margin-left', 323, 200, 1480, 1024);
+			@include adaptiveValue('max-width', 500, 300, 1480, 1024);
+		}
+
+		@media (max-width: $tablet) {
+			max-width: 100%;
+			margin-top: 0;
+			margin-left: 0;
+			position: static;
+			z-index: auto;
+		}
+	}
+
 	&__content {
+		max-width: rem(584);
+		margin-right: rem(142);
+		padding-block: rem(104);
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: rem(48);
-		max-width: rem(584);
-		text-align: center;
+		text-wrap: balance;
+		@include adaptiveValue('margin-right', 142, 0, 1920, 1024);
+		margin-left: auto;
+		@include adaptiveValue('max-width', 584, 490, 1920, 1024);
+
+		@include adaptiveValue('padding-block', 104, 20);
+		@include adaptiveValue('gap', 48, 20);
 	}
-	
-	// .hero__title
+
 	&__title {
-		font-family: 'Instrument Serif', serif;
-		font-weight: 400;
-		font-size: rem(130);
+		font-family: $fontInstrument;
+		@include adaptiveValue('font-size', 130, 90, 1920, 1024, 3);
+
 		line-height: 1em;
 		letter-spacing: -0.02em;
-		color: $wine;
 		margin: 0;
+		text-align: center;
+
+		span {
+			position: relative;
+			font-family: $fontBoston;
+			&::before {
+				content: '';
+				width: 250px;
+				height: 250px;
+				position: absolute;
+				top: 46%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: url('@img/icons/lines.svg') center no-repeat;
+			}
+		}
 	}
-	
-	// .hero__description
+
 	&__description {
-		font-family: 'IBM Plex Mono', monospace;
-		font-weight: 400;
+		text-align: center;
 		font-size: rem(18);
-		line-height: 1.6;
+		line-height: 1.27;
 		letter-spacing: -0.02em;
-		color: $wine;
-		margin: 0;
+		max-width: rem(510);
 	}
-	
-	// .hero__btn
+
 	&__btn {
-		background-color: $wine;
-		color: $foreground;
-		
-		svg {
-			color: $foreground;
-		}
+		max-width: rem(223);
+		width: 100%;
+		margin-inline: auto;
 	}
-	
-	// .hero__decoration
-	&__decoration {
-		position: absolute;
-		top: rem(111);
-		right: rem(93);
-		z-index: 3;
-		pointer-events: none;
-	}
-	
-	// Адаптивность
-	@media (max-width: $tablet) {
-		padding-top: rem(120);
-		
-		&__img {
-			&--first {
-				width: rem(400);
-				height: rem(450);
-			}
-			
-			&--second {
-				width: rem(300);
-				height: rem(400);
-				top: rem(80);
-				right: rem(50);
-			}
-		}
-		
-		&__title {
-			font-size: rem(80);
-		}
-		
-		&__description {
-			font-size: rem(16);
-		}
-		
-		&__decoration {
-			display: none;
-		}
-	}
-	
-	@media (max-width: $mobile) {
-		padding-top: rem(100);
-		min-height: auto;
-		
-		&__images {
-			display: none;
-		}
-		
-		&__content {
-			gap: rem(32);
-		}
-		
-		&__title {
-			font-size: rem(60);
-		}
-		
-		&__description {
-			font-size: rem(14);
-		}
-	}
+}
+.btn {
 }

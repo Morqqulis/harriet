@@ -24,9 +24,9 @@ body {
 	min-width: $minWidth + px;
 }
 body {
-	background-color: $backgroundColor;
-	color: $mainColor;
-	line-height: 1;
+	background-color: $background;
+	color: $foreground;
+	// line-height: 1.27;
 	font-family: $fontFamily;
 	font-size: $fontSize;
 	transition: all 0.3s ease 0s;

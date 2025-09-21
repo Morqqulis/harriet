@@ -1,7 +1,7 @@
 <header class="header">
    <div class="header__top">
       <div class="header__container">
-         <nav class="header__top-nav">
+         <nav class="header__top-nav" data-da=".header__mobile, 479.98,2">
             <ul class="header__top-list">
                <li class="header__top-item">
                   <a class="header__top-link header__top-link_active" href="#">Harriet Hacks</a>
@@ -23,7 +23,7 @@
             <img src="@img/logo.png" alt="Harriet Hacks Logo" width="288" height="95">
          </a>
 
-         <nav class="header__nav">
+         <nav class="header__nav" data-da=".header__mobile, 1023.98">
             <ul class="header__nav-list">
                <li class="header__nav-item">
                   <a href="#about" class="header__nav-link">About</a>
@@ -43,43 +43,49 @@
             </ul>
          </nav>
 
-         <div class="header__actions">
+
+
+         <div class="header__actions" data-da=".header__mobile, 767.98,3">
             <div class="header__socials">
                <a class="header__socials-link" href="#" aria-label="YouTube">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                     <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
-                     <path d="m10 15 5-3-5-3z"/>
+                     <path
+                           d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                     <path d="m10 15 5-3-5-3z" />
                   </svg>
                </a>
                <a class="header__socials-link" href="#" aria-label="Instagram">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                     <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                     <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                </a>
                <a class="header__socials-link" href="#" aria-label="LinkedIn">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                     <rect width="4" height="12" x="2" y="9"/>
-                     <circle cx="4" cy="4" r="2"/>
+                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                     <rect width="4" height="12" x="2" y="9" />
+                     <circle cx="4" cy="4" r="2" />
                   </svg>
                </a>
             </div>
-            <a href="#contact" class="header__contact-btn btn">
+            <a href="#contact" class="header__contact-btn btn btn_accent">
                Contact Harriet
                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M4.17 10L15.83 10"/>
-                  <path d="M10 4.17L15.83 10L10 15.83"/>
+                  <path d="M4.17 10L15.83 10" />
+                  <path d="M10 4.17L15.83 10L10 15.83" />
                </svg>
             </a>
          </div>
 
-         <button class="header__burger burger" type="button" aria-label="Toggle menu">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
+         <button class="header__burger icon-menu" type="button" aria-label="Toggle menu">
+            <span></span>
          </button>
+
+
+         <div class="header__mobile">
+            <span class="header__mobile-title">Menu</span>
+         </div>
       </div>
    </div>
 </header>
