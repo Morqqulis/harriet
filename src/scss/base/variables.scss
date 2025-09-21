@@ -17,7 +17,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Функция для конвертации px в em
 @function em($px, $current: 16) {
-	@return math.div($px, $current) + em;
+  @return math.div($px, $current) + em;
 }
 
 // Брейк-поинты
@@ -43,3 +43,5 @@ $fontSize: 16px;
 $background: #f1f1f1;
 $foreground: #2d0d2d;
 $accent: #e666e5;
+
+$footerbackground: #c9e3ff;
