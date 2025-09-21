@@ -1,12 +1,12 @@
-@use 'sass:math';
-@use '../fonts/app-fonts';
+@use "sass:math";
+@use "../fonts/app-fonts";
 
 // Минимальная ширина страницы
 $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1657;
+$maxWidthContainer: 1626;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -16,11 +16,13 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Функция для конвертации px в em
 @function em($px, $current: 16) {
-	@return math.div($px, $current) + em;
+  @return math.div($px, $current) + em;
 }
 
 // Брейк-поинты
-$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$pc: em(
+  $containerWidth
+); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
@@ -32,9 +34,9 @@ $middle: em(1024); // Средние экраны
 $responsiveType: 1;
 
 // Шрифт по умолчанию
-$fontFamily: 'IBM Plex Mono';
-$fontBoston: 'BostonSkylineClean';
-$fontInstrument: 'Instrument Serif';
+$fontFamily: "IBM Plex Mono";
+$fontBoston: "BostonSkylineClean";
+$fontInstrument: "Instrument Serif";
 
 $fontSize: 16px;
 
@@ -48,3 +50,5 @@ $foreground: #2d0d2d;
 // Цвета из макета
 $wine: #2d0d2d;
 $accent: #e666e5;
+
+$footerbackground: #c9e3ff;
