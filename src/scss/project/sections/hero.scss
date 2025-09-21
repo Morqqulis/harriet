@@ -1,0 +1,153 @@
+//====================================================================================================
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+.hero {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	padding-top: rem(176);
+	
+	// .hero__images
+	&__images {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	
+	// .hero__img
+	&__img {
+		position: absolute;
+		object-fit: cover;
+		
+		&--first {
+			width: rem(657);
+			height: rem(712);
+			top: 0;
+			left: 0;
+		}
+		
+		&--second {
+			width: rem(500);
+			height: rem(709);
+			top: rem(113);
+			right: rem(326);
+		}
+	}
+	
+	// .hero__container
+	&__container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	
+	// .hero__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(48);
+		max-width: rem(584);
+		text-align: center;
+	}
+	
+	// .hero__title
+	&__title {
+		font-family: 'Instrument Serif', serif;
+		font-weight: 400;
+		font-size: rem(130);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		color: $wine;
+		margin: 0;
+	}
+	
+	// .hero__description
+	&__description {
+		font-family: 'IBM Plex Mono', monospace;
+		font-weight: 400;
+		font-size: rem(18);
+		line-height: 1.6;
+		letter-spacing: -0.02em;
+		color: $wine;
+		margin: 0;
+	}
+	
+	// .hero__btn
+	&__btn {
+		background-color: $wine;
+		color: $foreground;
+		
+		svg {
+			color: $foreground;
+		}
+	}
+	
+	// .hero__decoration
+	&__decoration {
+		position: absolute;
+		top: rem(111);
+		right: rem(93);
+		z-index: 3;
+		pointer-events: none;
+	}
+	
+	// Адаптивность
+	@media (max-width: $tablet) {
+		padding-top: rem(120);
+		
+		&__img {
+			&--first {
+				width: rem(400);
+				height: rem(450);
+			}
+			
+			&--second {
+				width: rem(300);
+				height: rem(400);
+				top: rem(80);
+				right: rem(50);
+			}
+		}
+		
+		&__title {
+			font-size: rem(80);
+		}
+		
+		&__description {
+			font-size: rem(16);
+		}
+		
+		&__decoration {
+			display: none;
+		}
+	}
+	
+	@media (max-width: $mobile) {
+		padding-top: rem(100);
+		min-height: auto;
+		
+		&__images {
+			display: none;
+		}
+		
+		&__content {
+			gap: rem(32);
+		}
+		
+		&__title {
+			font-size: rem(60);
+		}
+		
+		&__description {
+			font-size: rem(14);
+		}
+	}
+}

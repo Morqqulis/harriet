@@ -1,0 +1,63 @@
+//========================================================================================================================================================
+
+.theme {
+	position: relative;
+	width: fit-content;
+	&__change {
+		width: 30px;
+		height: 30px;
+		flex: 0 0 30px;
+		cursor: pointer;
+	}
+	&__reset {
+		opacity: 0;
+		visibility: hidden;
+		display: block;
+
+		&::before {
+			content: "x";
+			position: absolute;
+			top: 10px;
+			right: -15px;
+			cursor: pointer;
+			width: 10px;
+			height: 10px;
+			font-size: 7px;
+			border-radius: 50%;
+			line-height: 10px;
+			color: #fff;
+			text-align: center;
+			background-color: #666;
+			text-transform: uppercase;
+		}
+	}
+	&__reset.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+	body {
+		color:#fff;
+		background-color:#333;
+	}
+}
+ */
+
+html.dark body {
+	color: #fff;
+	background-color: #333;
+}
+html.light body {
+	background-color: #fff;
+	color: #333;
+}
+
+html.dark .theme__change {
+	background: url("@img/theme/sun.svg") 0 0 / 100% no-repeat;
+}
+html.light .theme__change {
+	background: url("@img/theme/moon.svg") 0 0 / 100% no-repeat;
+}

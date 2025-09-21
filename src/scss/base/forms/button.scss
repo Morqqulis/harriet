@@ -1,0 +1,53 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(8);
+	padding: rem(10) rem(40) rem(10) rem(32);
+	border-radius: rem(100);
+	font-family: 'IBM Plex Mono', monospace;
+	font-weight: 500;
+	font-size: rem(17);
+	line-height: 1.3;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	border: none;
+	cursor: pointer;
+	
+	&--primary {
+		background-color: $wine;
+		color: $white;
+		
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($wine, 10%);
+			}
+		}
+	}
+	
+	&--outline {
+		background-color: $white;
+		color: $wine;
+		border: 1px solid $wine;
+		
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $wine;
+				color: $white;
+			}
+		}
+	}
+	
+	svg {
+		width: rem(20);
+		height: rem(20);
+		flex-shrink: 0;
+	}
+	
+	&._fw {
+		width: 100%;
+	}
+}

@@ -1,0 +1,229 @@
+//====================================================================================================
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+.about {
+	position: relative;
+	padding: rem(120) 0;
+	background-color: $background;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(57);
+		max-width: rem(1064);
+		margin: 0 auto;
+		padding: 0 rem(20);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(48);
+		text-align: center;
+	}
+
+	&__quote {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(16);
+	}
+
+	&__quote-icon {
+		width: rem(80);
+		height: rem(80);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $foreground;
+		border-radius: 50%;
+	}
+
+	&__quote-text {
+		font-family: 'Instrument Serif', serif;
+		font-weight: 400;
+		font-size: rem(90);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		color: $wine;
+		margin: 0;
+		text-align: center;
+		max-width: rem(822);
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		max-width: 100%;
+	}
+
+	&__description p {
+		font-family: 'IBM Plex Mono', monospace;
+		font-weight: 400;
+		font-size: rem(18);
+		line-height: 1.6;
+		letter-spacing: -0.02em;
+		color: $wine;
+		margin: 0;
+	}
+
+	&__btn {
+		background-color: $wine;
+		color: $foreground;
+
+		svg {
+			color: $foreground;
+		}
+	}
+
+	&__stats {
+		display: flex;
+		align-items: center;
+		gap: rem(59);
+		width: 100%;
+		justify-content: center;
+	}
+
+	&__stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(12);
+		width: rem(276);
+	}
+
+	&__stat-number {
+		font-family: 'Instrument Serif', serif;
+		font-weight: 400;
+		font-size: rem(90);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		color: $wine;
+	}
+
+	&__stat-label {
+		font-family: 'IBM Plex Mono', monospace;
+		font-weight: 400;
+		font-size: rem(19);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		color: $wine;
+		text-align: center;
+	}
+
+	&__stat-divider {
+		width: rem(1);
+		height: rem(132);
+		background-color: #bfbfbf;
+	}
+
+	&__read-more {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__read-more-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(8);
+		padding: rem(10) 0;
+		font-family: 'IBM Plex Mono', monospace;
+		font-weight: 500;
+		font-size: rem(17);
+		line-height: 1.3;
+		color: $wine;
+		text-decoration: none;
+		transition: color 0.3s ease;
+
+		svg {
+			width: rem(20);
+			height: rem(20);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+
+	&__images {
+		position: absolute;
+		top: rem(1754);
+		left: rem(81);
+		width: rem(317);
+		height: rem(346);
+		z-index: 1;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: rem(8);
+	}
+
+	&__img-decoration {
+		position: absolute;
+		top: rem(204);
+		left: rem(-130);
+		width: rem(345);
+		height: rem(260);
+		background-color: $accent;
+		border-radius: 50%;
+		filter: blur(rem(70));
+		opacity: 0.7;
+	}
+
+	@media (max-width: $tablet) {
+		padding: rem(80) 0;
+
+		&__container {
+			gap: rem(40);
+			padding: 0 rem(20);
+		}
+
+		&__quote-text {
+			font-size: rem(60);
+		}
+
+		&__stats {
+			flex-direction: column;
+			gap: rem(30);
+		}
+
+		&__stat-divider {
+			width: rem(200);
+			height: rem(1);
+		}
+
+		&__images {
+			display: none;
+		}
+	}
+
+	@media (max-width: $mobile) {
+		padding: rem(60) 0;
+
+		&__quote-text {
+			font-size: rem(40);
+		}
+
+		&__description p {
+			font-size: rem(16);
+		}
+
+		&__stat-number {
+			font-size: rem(60);
+		}
+
+		&__stat-label {
+			font-size: rem(16);
+		}
+	}
+}

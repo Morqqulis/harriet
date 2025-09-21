@@ -1,0 +1,50 @@
+@use 'sass:math';
+@use '../fonts/app-fonts';
+
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1657;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Функция для конвертации px в em
+@function em($px, $current: 16) {
+	@return math.div($px, $current) + em;
+}
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+$middle: em(1024); // Средние экраны
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+
+// Шрифт по умолчанию
+$fontFamily: 'IBM Plex Mono';
+$fontBoston: 'BostonSkylineClean';
+$fontInstrument: 'Instrument Serif';
+
+$fontSize: 16px;
+
+// Основные цвета
+$mainColor: #2d0d2d;
+$backgroundColor: #f1f1f1;
+
+$background: #f1f1f1;
+$foreground: #2d0d2d;
+
+// Цвета из макета
+$wine: #2d0d2d;
+$accent: #e666e5;

@@ -1,0 +1,61 @@
+// Заголовки, общие БЄМ блоки и проче...
+// Заголовки, общие БЄМ блоки и проче...
+@use "sass:math";
+@use "sass:color";
+@use "./base/variables" as *;
+@use "./base/mixins" as *;
+
+.btn {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: rem(16) rem(24);
+  gap: rem(8);
+  cursor: pointer;
+  background-color: $foreground;
+  position: relative;
+  color: $background;
+  border-radius: 100px;
+  transition: transform 0.3s ease 0s;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  svg {
+    path {
+      stroke: $background;
+    }
+  }
+
+  &_decor {
+    color: $accent;
+    svg {
+      path {
+        stroke: $accent;
+      }
+    }
+  }
+}
