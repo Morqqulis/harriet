@@ -1,131 +1,60 @@
 //====================================================================================================
 @use '../../base/variables' as *;
 @use '../../base/mixins' as *;
-
+//----------------------------------------------
 .soon {
-	position: relative;
-	height: rem(454);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
-	// .soon__bg
-	&__bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-	}
-	
-	// .soon__bg-img
-	&__bg-img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	
-	// .soon__container
+	background: url('@img/soon/soon-bg.jpg') center / cover no-repeat;
+	width: 100%;
 	&__container {
-		position: relative;
-		z-index: 2;
-		display: flex;
-		justify-content: center;
+		margin-bottom: rem(134);
 		width: 100%;
 	}
-	
-	// .soon__content
+
 	&__content {
 		display: flex;
 		align-items: center;
-		gap: rem(79);
+		text-align: center;
+		justify-content: center;
+
+		@include adaptiveValue('gap', 79, 14);
+		min-height: rem(454);
+		width: 100%;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
 	}
-	
-	// .soon__text
+
 	&__text {
 		display: flex;
 		flex-direction: column;
+		gap: rem(16);
+		// max-width: rem(544);
+
+		align-items: center;
+		@include adaptiveValue('margin-left', 150, 0, 1920, 767.98);
+	}
+
+	&__label {
+		font-size: rem(19);
+	}
+
+	&__title-wrapper {
+		display: flex;
 		align-items: center;
 		gap: rem(16);
 	}
-	
-	// .soon__label
-	&__label {
-		font-family: 'IBM Plex Mono', monospace;
-		font-weight: 400;
-		font-size: rem(19);
-		line-height: 1em;
-		letter-spacing: -0.02em;
-		text-transform: uppercase;
-		color: $wine;
-	}
-	
-	// .soon__title
+
 	&__title {
-		font-family: 'Instrument Serif', serif;
-		font-weight: 400;
+		font-family: $fontInstrument;
 		font-size: rem(48);
-		line-height: 1.3;
-		letter-spacing: -0.01em;
-		color: $wine;
-		margin: 0;
-		text-align: center;
 	}
-	
-	// .soon__description
-	&__description {
-		font-family: 'IBM Plex Mono', monospace;
-		font-weight: 400;
-		font-size: rem(18);
-		line-height: 1.6;
-		letter-spacing: -0.02em;
-		color: $wine;
-		margin: 0;
-		text-align: center;
-		max-width: rem(544);
-	}
-	
-	// .soon__btn
+
 	&__btn {
-		background-color: $foreground;
-		color: $wine;
-		border: 1px solid $wine;
-		
-		svg {
-			color: $wine;
-		}
+		height: fit-content;
 	}
-	
-	// Адаптивность
-	@media (max-width: $tablet) {
-		height: auto;
-		padding: rem(60) 0;
-		
-		&__content {
-			flex-direction: column;
-			gap: rem(40);
-			text-align: center;
-		}
-		
-		&__title {
-			font-size: rem(36);
-		}
-		
-		&__description {
-			font-size: rem(16);
-		}
+
+	&__info {
 	}
-	
-	@media (max-width: $mobile) {
-		padding: rem(40) 0;
-		
-		&__title {
-			font-size: rem(28);
-		}
-		
-		&__label {
-			font-size: rem(16);
-		}
-	}
+}
+.btn {
 }

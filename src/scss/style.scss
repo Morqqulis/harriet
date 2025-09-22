@@ -6,14 +6,14 @@
 @use 'bem';
 @use 'project/sections/header';
 @use 'project/sections/hero';
-// @use 'project/sections/soon';
-// @use 'project/sections/about';
-// @use 'project/sections/course';
-// @use 'project/sections/media';
-// @use 'project/sections/logos';
-// @use 'project/sections/podcast';
-// @use 'project/sections/footer';
-// @use 'project/pages/home';
+@use 'project/sections/soon';
+@use 'project/sections/about';
+@use 'project/sections/course';
+@use 'project/sections/media';
+@use 'project/sections/logos';
+@use 'project/sections/podcast';
+@use 'project/sections/footer';
+@use 'project/pages/home';
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
 //&display=swap - добавить при подключении через плагин

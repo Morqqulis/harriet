@@ -1,253 +1,339 @@
 //====================================================================================================
-@use "../../base/variables" as *;
-@use "../../base/mixins" as *;
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
 
 .about {
-  position: relative;
-  padding: rem(126) 0;
-  background-color: $background;
+	position: relative;
+	padding: rem(126) 0;
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(48);
-    width: rem(1064);
-  }
+	&__img {
+		position: absolute;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(48);
-    text-align: center;
-  }
+		&--first {
+			top: rem(302);
+			left: 0;
+		}
 
-  &__quote {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(16);
+		&--second {
+			position: absolute;
+			top: rem(-42);
+			right: 0;
+		}
+	}
 
-    img {
-      width: rem(80);
-      height: rem(80);
-    }
-  }
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  &__quote-text {
-    font-family: $fontInstrument;
-    font-weight: 400;
-    font-size: rem(90);
-    line-height: 1em;
-    letter-spacing: -0.02em;
-    color: $wine;
-    margin: 0;
-    text-align: center;
-    max-width: rem(822);
-    span {
-      font-family: $fontBoston;
-    }
-    span:last-child {
-      color: $accent;
-    }
-  }
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(48);
+		text-align: center;
+		max-width: rem(882);
+		position: relative;
+		z-index: 5;
+		background-color: $background;
+	}
 
-  &__description {
-    display: flex;
-    flex-direction: column;
-    gap: rem(16);
-    max-width: 100%;
-    position: relative;
-  }
+	&__quote {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(16);
 
-  &__description p {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
-    font-size: rem(18);
-    line-height: 1.6;
-    letter-spacing: -0.02em;
-    color: $wine;
-    margin: 0;
-  }
+		img {
+			width: rem(80);
+			height: rem(80);
+		}
+	}
 
-  &__btn {
-    width: rem(223);
-  }
+	&__quote-text {
+		font-family: $fontInstrument;
+		font-weight: 400;
+		font-size: rem(90);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		color: $foreground;
+		margin: 0;
+		text-align: center;
+		max-width: rem(822);
+		span {
+			font-family: $fontBoston;
+		}
+		span:last-child {
+			color: $accent;
+		}
+	}
 
-  &__stats {
-    display: flex;
-    align-items: center;
-    gap: rem(59);
-    width: 100%;
-    justify-content: center;
-  }
+	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		max-width: 100%;
+		position: relative;
+	}
 
-  &__stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(12);
-    width: rem(276);
-  }
+	&__description p {
+		font-family: 'IBM Plex Mono', monospace;
+		font-weight: 400;
+		font-size: rem(18);
+		line-height: 1.6;
+		letter-spacing: -0.02em;
+		color: $foreground;
+		margin: 0;
+	}
 
-  &__stat-number {
-    font-family: "Instrument Serif", serif;
-    font-weight: 400;
-    font-size: rem(90);
-    line-height: 1em;
-    letter-spacing: -0.02em;
-    color: $wine;
-  }
+	&__btn {
+		width: rem(223);
+	}
 
-  &__stat-label {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
-    font-size: rem(19);
-    line-height: 1em;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: $wine;
-    text-align: center;
-  }
+	&__stats {
+		margin-top: rem(57);
+		display: flex;
+		align-items: center;
+		gap: rem(59);
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
 
-  &__stat-divider {
-    width: rem(1);
-    height: rem(132);
-    background-color: #bfbfbf;
-  }
-  &__read-more {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: rem(40) 0 rem(20);
-    background: linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.95) 60%,
-      rgba(255, 255, 255, 0.55) 100%
-    );
-  }
+	&__stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(12);
+		width: rem(276);
+	}
 
-  &__read-more-btn {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    font-size: rem(17);
-    color: $wine;
-    text-decoration: none;
-    padding: rem(8) rem(20);
-    border-radius: rem(20);
-    transition: all 0.3s ease;
+	&__stat-number {
+		font-family: 'Instrument Serif', serif;
+		font-weight: 400;
+		font-size: rem(90);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		color: $foreground;
+	}
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.9);
-      color: $accent;
-    }
-  }
+	&__stat-label {
+		font-family: 'IBM Plex Mono', monospace;
+		font-weight: 400;
+		font-size: rem(19);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		color: $foreground;
+	}
 
-  //   &__read-more {
-  //     position: relative;
-  //     z-index: 2;
-  //   }
+	&__stat-divider {
+		width: rem(1);
+		height: rem(132);
+		background-color: #bfbfbf;
+	}
 
-  //   &__read-more-btn {
-  //     display: inline-flex;
-  //     align-items: center;
-  //     gap: rem(8);
-  //     padding: rem(10) 0;
-  //     font-family: "IBM Plex Mono", monospace;
-  //     font-weight: 500;
-  //     font-size: rem(17);
-  //     line-height: 1.3;
-  //     color: $wine;
-  //     text-decoration: none;
-  //     transition: color 0.3s ease;
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		max-width: 100%;
+		font-size: rem(18);
+		position: relative;
+		padding-inline: rem(50);
+		text-wrap: balance;
+	}
 
-  //     svg {
-  //       width: rem(20);
-  //       height: rem(20);
-  //     }
+	&__more {
+		position: relative;
 
-  //     @media (any-hover: hover) {
-  //       &:hover {
-  //         color: $accent;
-  //       }
-  //     }
-  //   }
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: rem(0);
 
-  &__images {
-    position: absolute;
-    top: rem(1754);
-    left: rem(81);
-    width: rem(317);
-    height: rem(346);
-    z-index: 1;
-  }
+			left: 0;
+			width: 100%;
+			height: rem(150);
+			background: linear-gradient(180deg, rgba(241, 241, 241, 0), rgba(241, 241, 241, 1) 100%);
+			transition: all 0.3s ease 0s;
+			opacity: 1;
+			visibility: visible;
+		}
+		&_active {
+			&::after {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+	&__more-btn {
+		position: absolute;
+		left: 50%;
+		bottom: rem(20);
+		font-weight: 500;
+		transform: translateX(-50%);
+		z-index: 5;
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		justify-content: center;
+		margin: 0 auto;
+		transition: all 0.3s ease 0s;
 
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: rem(8);
-  }
+		svg {
+			fill: $foreground;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				scale: 1.05;
+			}
+		}
 
-  &__img-decoration {
-    position: absolute;
-    top: rem(204);
-    left: rem(-130);
-    width: rem(345);
-    height: rem(260);
-    background-color: $accent;
-    border-radius: 50%;
-    filter: blur(rem(70));
-    opacity: 0.7;
-  }
+		.about__more_active & {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+	// &__read-more {
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	text-align: center;
+	// 	padding: rem(40) 0 rem(20);
+	//    min-height: 150px;
+	// 	background: linear-gradient(180deg, rgba(241, 241, 241, 0), rgba(241, 241, 241, 1) 100%);
+	// }
 
-  @media (max-width: $tablet) {
-    padding: rem(80) 0;
+	// &__read-more-btn {
+	// 	font-family: 'IBM Plex Mono', monospace;
+	// 	font-weight: 500;
+	// 	font-size: rem(17);
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	margin: 0 auto;
+	// 	color: $foreground;
+	// 	text-decoration: none;
+	// 	padding: rem(8) rem(20);
+	// 	border-radius: rem(20);
+	// 	transition: all 0.3s ease;
 
-    &__container {
-      gap: rem(40);
-      padding: 0 rem(20);
-    }
+	// 	&:hover {
+	// 		// background: rgba(255, 255, 255, 0.9);
+	// 		// color: $background;
+	// 	}
+	// }
 
-    &__quote-text {
-      font-size: rem(60);
-    }
+	//   &__read-more {
+	//     position: relative;
+	//     z-index: 2;
+	//   }
 
-    &__stats {
-      flex-direction: column;
-      gap: rem(30);
-    }
+	//   &__read-more-btn {
+	//     display: inline-flex;
+	//     align-items: center;
+	//     gap: rem(8);
+	//     padding: rem(10) 0;
+	//     font-family: "IBM Plex Mono", monospace;
+	//     font-weight: 500;
+	//     font-size: rem(17);
+	//     line-height: 1.3;
+	//     color: $wine;
+	//     text-decoration: none;
+	//     transition: color 0.3s ease;
 
-    &__stat-divider {
-      width: rem(200);
-      height: rem(1);
-    }
+	//     svg {
+	//       width: rem(20);
+	//       height: rem(20);
+	//     }
 
-    &__images {
-      display: none;
-    }
-  }
+	//     @media (any-hover: hover) {
+	//       &:hover {
+	//         color: $accent;
+	//       }
+	//     }
+	//   }
 
-  @media (max-width: $mobile) {
-    padding: rem(60) 0;
+	&__img-decoration {
+		position: absolute;
+		top: rem(204);
+		left: rem(-130);
+		width: rem(345);
+		height: rem(260);
+		background-color: $foreground;
+		border-radius: 50%;
+		filter: blur(rem(70));
+		opacity: 0.7;
+	}
 
-    &__quote-text {
-      font-size: rem(40);
-    }
+	@media (max-width: $tablet) {
+		padding: rem(80) 0;
 
-    &__description p {
-      font-size: rem(16);
-    }
+		&__container {
+			gap: rem(40);
+			padding: 0 rem(20);
+		}
 
-    &__stat-number {
-      font-size: rem(60);
-    }
+		&__quote-text {
+			font-size: rem(60);
+		}
 
-    &__stat-label {
-      font-size: rem(16);
-    }
-  }
+		&__stats {
+			flex-direction: column;
+			gap: rem(30);
+		}
+
+		&__stat-divider {
+			width: rem(200);
+			height: rem(1);
+		}
+
+		&__images {
+			display: none;
+		}
+	}
+
+	@media (max-width: $mobile) {
+		padding: rem(60) 0;
+
+		&__quote-text {
+			font-size: rem(40);
+		}
+
+		&__description p {
+			font-size: rem(16);
+		}
+
+		&__stat-number {
+			font-size: rem(60);
+		}
+
+		&__stat-label {
+			font-size: rem(16);
+		}
+	}
+}
+
+.spollers {
+	&__item {
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	&__body {
+		background: linear-gradient(180deg, rgba(241, 241, 241, 0), rgba(241, 241, 241, 1) 100%);
+	}
+
+	&__text {
+	}
 }

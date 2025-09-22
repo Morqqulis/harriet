@@ -14,9 +14,16 @@
 :active {
 	// outline: none;
 }
+
+cite {
+	font-style: normal;
+}
 a:focus,
 a:active {
-	// outline: none;
+	outline: none;
+}
+html {
+	scroll-behavior: smooth;
 }
 html,
 body {
@@ -30,6 +37,7 @@ body {
 	font-family: $fontFamily;
 	font-size: $fontSize;
 	transition: all 0.3s ease 0s;
+	letter-spacing: -0.02em;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -37,21 +45,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-// @media (prefers-color-scheme: dark) {
-// 	body {
-// 		background-color: #000;
-// 		color: #fff;
-// 		line-height: 1;
-// 		font-family: $fontFamily;
-// 		font-size: $fontSize;
-// 		//text-rendering: optimizeLegibility;
-// 		-ms-text-size-adjust: 100%;
-// 		-moz-text-size-adjust: 100%;
-// 		-webkit-text-size-adjust: 100%;
-// 		-webkit-font-smoothing: antialiased;
-// 		-moz-osx-font-smoothing: grayscale;
-// 	}
-// }
+
 input,
 button,
 textarea {

@@ -37,7 +37,7 @@
     font-size: rem(90);
     line-height: rem(108);
     letter-spacing: -0.02em;
-    color: $wine;
+    color: $foreground;
     margin-top: rem(50);
   }
 
@@ -85,7 +85,7 @@
     line-height: rem(20);
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: $wine;
+    color: $foreground;
   }
 
   // .podcast__episode-title
@@ -95,7 +95,7 @@
     font-size: rem(36);
     line-height: rem(43);
     letter-spacing: -0.01em;
-    color: $wine;
+    color: $foreground;
     margin: 0;
   }
 
@@ -111,7 +111,7 @@
     font-weight: 500;
     font-size: rem(17);
     line-height: 1.3;
-    color: $wine;
+    color: $foreground;
     text-decoration: none;
     transition: background-color 0.3s ease;
     align-self: flex-start;
