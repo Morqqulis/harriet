@@ -1,0 +1,50 @@
+<section class="contact">
+   <div class="contact__container">
+      <div class="contact__img">
+         <img src="@img/contact/contact-main.jpg" alt="Harriet Hacks Image">
+      </div>
+      <div class="contact__col">
+         <h1 class="contact__title"><span>Let's</span> Connect</h1>
+
+         <div class="contact__content">
+            <p class="contact__info">
+               I’d love to hear from you! Send hellos, inquiries.
+               Fill out the form below, or send me an <a href="mailto:harrietHacks@gmail.com">email:harrietHacks@gmail.com</a>
+            </p>
+
+            <form class="contact__form" action="multipart/form-data" method="POST" data-ajax="true" data-dev="true">
+               <div class="contact__form-row">
+                  <label class="contact__form-label">
+                     First Name*
+                     <input class="contact__form-input" type="text" name="firstName" placeholder="Type Your First Name" id="first-name" required></label>
+                  <label class="contact__form-label">
+                     Last Name*
+                     <input class="contact__form-input" type="text" name="lastName" placeholder="Type Your Last Name" id="last-name" required></label>
+               </div>
+               <label class="contact__form-label">
+                  Email*
+                  <input class="contact__form-input" type="email" name="email" placeholder="Type Your Email" id="email" required>
+               </label>
+               <label class="contact__form-label">
+                  Phone*
+                  <input class="contact__form-input" type="tel" name="phone" placeholder="Type Your Phone" id="phone" required>
+               </label>
+               <label class="contact__form-label">
+                  Organization*
+                  <input class="contact__form-input" type="text" name="organization" placeholder="Type Your Organization" id="organization" required>
+               </label>
+               <label class="contact__form-label">
+                  Message*
+                  <textarea class="contact__form-textarea" name="message" placeholder="Type your message..." id="message" required></textarea>
+               </label>
+               <button class="contact__form-button btn" type="submit" aria-label="Submit">Submit
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                     <path d="M4.17 10L15.83 10" />
+                     <path d="M10 4.17L15.83 10L10 15.83" />
+                  </svg>
+               </button>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
