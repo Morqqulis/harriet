@@ -3,8 +3,16 @@
 @use '../../base/mixins' as *;
 //----------------------------------------------
 .soon {
-	background: url('@img/soon/soon-bg.jpg') center / cover no-repeat;
-	width: 100%;
+	background-image: url('@img/soon/soon-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100vw auto;
+	background-position: center;
+	background-color: #e8a9e0;
+
+	&_about {
+		background-image: url('@img/soon/soon-bg-about.jpg');
+	}
+
 	&__container {
 		margin-bottom: rem(134);
 		width: 100%;
@@ -19,6 +27,9 @@
 		@include adaptiveValue('gap', 79, 14);
 		min-height: rem(454);
 		width: 100%;
+		@media (min-width: rem(1800)) {
+			min-height: rem(545);
+		}
 		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
@@ -55,6 +66,4 @@
 
 	&__info {
 	}
-}
-.btn {
 }

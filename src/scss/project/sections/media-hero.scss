@@ -1,0 +1,134 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+.media-hero {
+	&__container {
+		container-type: inline-size;
+	}
+
+	&__title {
+		font-size: clamp(rem(80), 8vw, rem(130));
+		font-family: $fontInstrument;
+
+		letter-spacing: -0.02em;
+		text-align: center;
+		margin-block-end: clamp(rem(24), 4vw, rem(48));
+
+		span {
+			font-family: $fontBoston;
+			color: $accent;
+		}
+	}
+
+	&__content {
+		isolation: isolate;
+	}
+
+	&__tabs {
+		contain: layout style;
+	}
+
+	&__tabs-header {
+		padding-block-end: clamp(rem(24), 4vw, rem(48));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: rem(16);
+	}
+
+	&__tabs-navigation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: rem(16);
+	}
+
+	&__article {
+		contain: layout style;
+		height: fit-content;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+	}
+
+	&__pagination {
+		padding-block: clamp(rem(24), 4vw, rem(48));
+	}
+}
+.tabs {
+	&__header-label {
+		font-weight: 500;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: rem(8) rem(16);
+		border-radius: rem(100);
+		transition:
+			background-color 0.2s ease,
+			color 0.2s ease,
+			transform 0.1s ease;
+		gap: rem(8);
+		background-color: #d9d9d9;
+		cursor: pointer;
+		border: none;
+		font-family: inherit;
+		will-change: background-color, color, transform;
+
+		&:hover {
+			transform: translateY(-1px);
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+
+		&._tab-active {
+			background-color: $foreground;
+			color: $background;
+
+			svg path {
+				fill: $background;
+				transition: fill 0.2s ease;
+			}
+		}
+
+		svg {
+			flex-shrink: 0;
+		}
+	}
+
+	&__content {
+		contain: layout;
+	}
+
+	&__body {
+		animation: fadeIn 0.3s ease;
+		@include adaptiveValue('padding-block', 64, 48);
+		transition: opacity 0.2s ease, transform 0.2s ease;
+	}
+
+	&__articles {
+		position: relative;
+		width: 100%;
+		min-height: 200px;
+	}
+
+	// &__column {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	gap: inherit;
+	// }
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(rem(8));
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

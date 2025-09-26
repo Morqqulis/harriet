@@ -1,0 +1,9 @@
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
+	<rect id="lucide/book-open-text" width="20.000000" height="20.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	<path id="Vector" d="M0 0L11.6667 0" stroke="rgb(45,13,45)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="matrix(0,1,-1,0,10,5.83331)" />
+	<path id="Vector" d="M13.333 10L14.9997 10" stroke="rgb(45,13,45)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+	<path id="Vector" d="M13.333 6.66669L14.9997 6.66669" stroke="rgb(45,13,45)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+	<path id="Vector" d="M1.91107 14.7559C1.75479 14.5996 1.66699 14.3877 1.66699 14.1667L1.66699 3.33333C1.66699 3.11232 1.75479 2.90036 1.91107 2.74408C2.06735 2.5878 2.27931 2.5 2.50033 2.5L6.66699 2.5C7.55105 2.5 8.39889 2.85119 9.02402 3.47631C9.64914 4.10143 10.0003 4.94928 10.0003 5.83333C10.0003 4.94928 10.3515 4.10143 10.9766 3.47631C11.6018 2.85119 12.4496 2.5 13.3337 2.5L17.5003 2.5C17.7213 2.5 17.9333 2.5878 18.0896 2.74408C18.2459 2.90036 18.3337 3.11232 18.3337 3.33333L18.3337 14.1667C18.3337 14.3877 18.2459 14.5996 18.0896 14.7559C17.9333 14.9122 17.7213 15 17.5003 15L12.5003 15C11.8373 15 11.2014 15.2634 10.7326 15.7322C10.2637 16.2011 10.0003 16.837 10.0003 17.5C10.0003 16.837 9.73693 16.2011 9.26809 15.7322C8.79925 15.2634 8.16337 15 7.50033 15L2.50033 15C2.27931 15 2.06735 14.9122 1.91107 14.7559Z" fill-rule="nonzero" stroke="rgb(45,13,45)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+	<path id="Vector" d="M5 10L6.66667 10" stroke="rgb(0,0,0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+	<path id="Vector" d="M5 6.66669L6.66667 6.66669" stroke="rgb(0,0,0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+</svg>

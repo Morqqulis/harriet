@@ -1,8 +1,8 @@
 {
-	"name": "Achilles",
+	"name": "harriet",
 	"version": "3.0.0",
 	"description": "Start template with Gulp and Webpack",
-	"author": "Achilles",
+	"author": "Dmitriy",
 	"private": true,
 	"license": "",
 	"type": "module",
@@ -73,6 +73,7 @@
 	},
 	"dependencies": {
 		"aux": "^0.0.6",
+		"macy": "^2.5.1",
 		"simplebar": "latest"
 	}
 }

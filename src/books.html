@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/add/head.htm',{
+"title":"Harriet Hacks | Books"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/sections/header.htm',{
+      "logo": "img/logo-2.svg"
+      })
+      <main>
+         <section class="books-hero">
+            <div class="books-hero__container">
+               <h1 class="books-hero__title"><span>My</span> <span>Book</span></h1>
+               <div class="books-hero__content">
+                  <div class="books-hero__img">
+                     <img src="@img/books-hero/book.jpg" alt="Book image">
+                     <span>Coming Soon</span>
+                  </div>
+                  <a href="#" class="books-hero__btn btn">
+                     Order The Book
+                     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
+                        <rect id="lucide/arrow-right" width="20.000000" height="20.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+                        <path id="Vector" d="M4.16675 10L15.8334 10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" />
+                        <path id="Vector" d="M10 4.16669L15.8333 10L10 15.8334" fill-rule="nonzero" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </section>
+
+         <section class="quiz">
+            <div class="quiz__container">
+               <div class="quiz__content">
+                  <div class="quiz__info">
+                     <span class="quiz__label">TAKE THE QUIZ</span>
+                     <h2 class="quiz__title">Lorem ipsum dolor consectetur</h2>
+                     <div class="quiz__text">
+                        <p>
+                           Difficile tempus limitare tuam notam formam? Cape hunc LIBERUM 1-min examen ut invenias tuam maxime magneticam visualem formam ad alliciendos somniorum clientes dum dormis.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="quiz__colab">
+                     <div class="quiz__img">
+                        <img src="@img/books-hero/colab.jpg" alt="Google Colab image">
+                     </div>
+                     <a class="quiz__btn btn" type="button" href="#">
+                        Use Google Colabs
+                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
+                           <rect id="lucide/arrow-right" width="20.000000" height="20.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+                           <path id="Vector" d="M4.16675 10L15.8334 10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" />
+                           <path id="Vector" d="M10 4.16669L15.8333 10L10 15.8334" fill-rule="nonzero" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         @@include('html/sections/course.htm',{})
+
+      </main>
+      @@include('html/sections/footer.htm',{})
+   </div>
+   @@include('html/add/js.htm',{})
+</body>
+
+</html>

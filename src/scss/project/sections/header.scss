@@ -84,9 +84,17 @@
 
 	&__main {
 		color: $foreground;
+		.header_padding & {
+			@include adaptiveValue('padding-block', 40, 20);
+		}
 	}
 
 	&__logo {
+		transition: scale 0.3s ease 0s;
+		will-change: scale;
+		&:hover {
+			scale: 1.05;
+		}
 		img {
 			width: 100%;
 			height: auto;

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/add/head.htm',{
+"title":"Harriet Hacks | About"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/sections/header.htm',{
+      "logo": "img/logo-2.svg"
+      })
+      <main>
+         @@include('html/sections/about-hero.htm',{})
+         @@include('html/blocks/hack-marquee.htm',{})
+         @@include('html/sections/history.htm',{})
+         <section class="soon soon_about">
+            <div class="soon__container">
+               <div class="soon__content">
+                  <div class="soon__text">
+                     <span class="soon__label">coming soon</span>
+                     <div class="soon__title-wrapper">
+                        <h2 class="soon__title">The AI Security Handbook</h2>
+                     </div>
+                     <p class="soon__info">published by No Starch Press</p>
+                  </div>
+                  <a class="soon__btn btn btn_white" href="#">
+                     Preorder Now
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4.17 10L15.83 10" />
+                        <path d="M10 4.17L15.83 10L10 15.83" />
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </section>
+         @@include('html/sections/logos.htm',{})
+         @@include('html/sections/know.htm',{})
+
+
+      </main>
+      @@include('html/sections/footer.htm',{})
+   </div>
+
+
+   @@include('html/add/js.htm',{})
+</body>
+
+</html>

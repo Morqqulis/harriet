@@ -71,14 +71,14 @@
 
 	&__content {
 		max-width: rem(584);
-		margin-right: rem(142);
+		@include adaptiveValue('margin-right', 442, 142, 1920, 1500);
 		padding-block: rem(104);
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-wrap: balance;
-		@include adaptiveValue('margin-right', 142, 0, 1920, 1024);
+		// @include adaptiveValue('margin-right', 142, 0, 1920, 1024);
 		margin-left: auto;
 		@include adaptiveValue('max-width', 584, 490, 1920, 1024);
 
