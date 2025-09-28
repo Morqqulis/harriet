@@ -141,8 +141,8 @@
 			left: 50%;
 			width: 0;
 			transform: translateX(-50%);
-			height: rem(1);
-			background-color: $accent;
+			height: rem(2);
+			background-color: $foreground;
 			transition: all 0.3s ease 0s;
 		}
 		@media (any-hover: hover) {

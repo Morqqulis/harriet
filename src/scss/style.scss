@@ -10,11 +10,13 @@
 @use 'project/sections/footer';
 
 // Pages
-@use 'project/pages/home';
+@use 'project/pages/home-page';
 @use 'project/pages/contact-page';
 @use 'project/pages/about-page';
-@use 'project/pages/books';
-@use 'project/pages/media';
+@use 'project/pages/books-page';
+@use 'project/pages/media-page';
+@use 'project/pages/podcast-page';
+@use 'project/pages/course-page';
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
 //&display=swap - добавить при подключении через плагин
@@ -41,7 +43,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	overflow-x: clip;
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;

@@ -1,0 +1,146 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+//----------------------------------------------
+.course-info {
+	@include adaptiveValue('padding-top', 64, 48);
+	@include adaptiveValue('padding-bottom', 160, 60);
+
+	position: relative;
+	&__container {
+		display: grid;
+		grid-template-columns: rem(336) 1fr;
+		@include adaptiveValue('gap', 55, 32);
+		position: relative;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+			gap: rem(40);
+		}
+	}
+
+	&__aside {
+	}
+
+	&__content {
+		border-left: 1px solid #bfbfbf;
+		display: grid;
+		@include adaptiveValue('gap', 80, 40);
+		padding-left: rem(54);
+		@media (max-width: $tablet) {
+			border-left: none;
+			border-top: 1px solid #bfbfbf;
+			padding-left: 0;
+			@include adaptiveValue('padding-top', 32, 24);
+		}
+	}
+
+	&__section {
+	}
+
+	&__title {
+		font-family: $fontInstrument;
+		@include adaptiveValue('font-size', 48, 28);
+		line-height: 108.333333%;
+		letter-spacing: -0.02em;
+		@include adaptiveValue('margin-bottom', 32, 20);
+	}
+
+	&__text {
+		p {
+			@include adaptiveValue('font-size', 18, 16);
+			line-height: 1.27;
+			letter-spacing: -0.02em;
+		}
+	}
+
+	&__levels {
+	}
+
+	&__gain {
+	}
+
+	&__included {
+	}
+
+	&__dates {
+	}
+}
+.course-aside {
+	position: relative;
+	&__wrapper {
+		@include adaptiveValue('min-height', 890, 500);
+		padding-block: rem(20);
+		position: sticky;
+		top: rem(0);
+		overflow-y: auto;
+		display: flex;
+		flex-direction: column;
+		padding-right: rem(8);
+
+		@media (max-width: $tablet) {
+			min-height: auto;
+			max-height: none;
+			overflow: visible;
+			padding-right: 0;
+		}
+	}
+
+	&__label {
+		display: block;
+		text-transform: uppercase;
+		@include adaptiveValue('font-size', 15, 14);
+		line-height: 1.333;
+		letter-spacing: -0.02em;
+		@include adaptiveValue('margin-bottom', 16, 12);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		@include adaptiveValue('margin-bottom', 32, 24);
+	}
+
+	&__item {
+	}
+
+	&__btn {
+		display: block;
+		@include adaptiveValue('padding', 8, 6);
+		border-bottom: 1px solid #bfbfbf;
+		@include adaptiveValue('font-size', 16, 14);
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
+		&:hover {
+			background-color: $foreground;
+			color: $background;
+		}
+	}
+
+	&__timer-wrapper {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('gap', 16, 12);
+		margin-top: auto;
+	}
+
+	&__timer {
+	}
+
+	&__timer-title {
+		@include adaptiveValue('font-size', 15, 14);
+		line-height: 1.333;
+		letter-spacing: -0.02em;
+	}
+
+	&__link {
+		text-align: center;
+		@include adaptiveValue('padding-block', 16, 12);
+
+		@media (max-width: $tablet) {
+			max-width: rem(340);
+			margin-inline: auto;
+			width: 100%;
+		}
+	}
+}

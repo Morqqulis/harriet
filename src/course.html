@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/add/head.htm',{
+"title":"Harriet Hacks | Course"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/sections/header.htm',{
+      "logo": "img/logo-2.svg"
+      })
+      <main class="page">
+         @@include('html/sections/course-hero.htm',{})
+         @@include('html/sections/benefits.htm',{})
+         <section class="course-info">
+            <div class="course-info__container">
+               <aside class="course-info__aside course-aside">
+                  <div class="course-aside__wrapper">
+                     <span class="course-aside__label">CHAPTERS</span>
+                     <ul class="course-aside__list">
+                        <li class="course-aside__item">
+                           <a class="course-aside__btn" href="#course-info-about">About</a>
+                        </li>
+                        <li class="course-aside__item">
+                           <a class="course-aside__btn" href="#course-info-who">Who should take this course?</a>
+                        </li>
+                        <li class="course-aside__item">
+                           <a class="course-aside__btn" href="#course-info-gain">What you’ll gain</a>
+                        </li>
+                        <li class="course-aside__item">
+                           <a class="course-aside__btn" href="#course-info-included">What’s included</a>
+                        </li>
+                        <li class="course-aside__item">
+                           <a class="course-aside__btn" href="#course-info-dates">Cohort Dates for 2026</a>
+                        </li>
+                     </ul>
+
+                     <div class="course-aside__timer-wrapper">
+                        <span class="course-aside__timer-title">
+                           Next cohort starts in: <br />
+                           19 January 2026</span>
+                        @@include('html/blocks/timer.htm',{
+                        "class": "course-aside__timer"
+                        })
+                        <a href="#" class="course-aside__link btn">
+                           Express Interest
+                           <img src="@img/icons/arrow-white.svg" alt="arrow" />
+                        </a>
+                     </div>
+                  </div>
+               </aside>
+
+               <div class="course-info__content">
+                  <section class="course-info__section" id="course-info-about">
+                     <h2 class="course-info__title">About</h2>
+                     <div class="course-info__text text">
+                        <p>
+                           Become AI security–ready in just 8 weeks. Gain the skills  to launch or advance your career in AI security — whatever your  background. By the end of the course, you’ll
+                           rethink what it means to be “technical”: even if you’ve never written a line of code before, you’ll be running AI attacks and understanding how to defend against them.
+                        </p>
+                     </div>
+                  </section>
+                  <section class="course-info__section" id="course-info-who">
+                     <h2 class="course-info__title">Who should take this course?</h2>
+                     <ul class="course-info__levels headings-list">
+                        <li class="headings-list__item">
+                           <div class="headings-list__header">
+                              <span class="headings-list__number">Level 1</span>
+                              <span class="headings-list__title">Foundation</span>
+                           </div>
+                           <div class="headings-list__text">
+                              <p>
+                                 Open to everyone. Perfect for professionals in any field who want to understand the risks of AI, while still getting hands-on with technical exercises.
+                              </p>
+                           </div>
+                        </li>
+
+                        <li class="headings-list__item">
+                           <div class="headings-list__header">
+                              <span class="headings-list__number">Level 2</span>
+                              <span class="headings-list__title">Strategic</span>
+                           </div>
+                           <div class="headings-list__text">
+                              <p>
+                                 Designed for CISOs, risk managers, and leaders who need to integrate AI security into governance and risk frameworks.
+                              </p>
+                           </div>
+                        </li>
+
+                        <li class="headings-list__item">
+                           <div class="headings-list__header">
+                              <span class="headings-list__number">Level 3</span>
+                              <span class="headings-list__title">practitioner</span>
+                           </div>
+                           <div class="headings-list__text">
+                              <p>
+                                 For cyber and AI security professionals who want advanced technical proficiency. You must complete each level in order — no shortcuts.
+                              </p>
+                           </div>
+                        </li>
+                     </ul>
+                  </section>
+                  <section class="course-info__section" id="course-info-gain">
+                     <h2 class="course-info__title">What you’ll gain</h2>
+                     <ol class="course-info__gain ol">
+                        <li class="ol__item">
+                           <span class="ol__number">1</span>
+                           <div class="ol__text">
+                              <p>
+                                 Skills to get hired in AI security roles across industry, government, and research
+                              </p>
+                           </div>
+                        </li>
+                        <li class="ol__item">
+                           <span class="ol__number">2</span>
+                           <div class="ol__text">
+                              <p>
+                                 Hands-on technical expertise, regardless of your starting point. You’ll leave knowing how to run attacks against AI systems and how to defend  them
+                              </p>
+                           </div>
+                        </li>
+                        <li class="ol__item">
+                           <span class="ol__number">3</span>
+                           <div class="ol__text">
+                              <p>
+                                 A shareable certificate to showcase on LinkedIn and with your network
+                              </p>
+                           </div>
+                        </li>
+                        <li class="ol__item">
+                           <span class="ol__number">4</span>
+                           <div class="ol__text">
+                              <p>
+                                 A global community of peers to support your career long after the course ends
+                              </p>
+                           </div>
+                        </li>
+                     </ol>
+                  </section>
+                  <section class="course-info__section" id="course-info-included">
+                     <h2 class="course-info__title">What’s included</h2>
+                     <ol class="course-info__included ol">
+                        <li class="ol__item">
+                           <span class="ol__number">1</span>
+                           <div class="ol__text">
+                              <p>
+                                 8 weeks of blended learning: self-paced e-learning modules you can fit around your schedule plus weekly live facilitator-led seminars (multiple time zone options) to
+                                 do exercises, ask questions, and cement your knowledge
+                              </p>
+                           </div>
+                        </li>
+                        <li class="ol__item">
+                           <span class="ol__number">2</span>
+                           <div class="ol__text">
+                              <p>
+                                 Deliberately small cohorts to ensure personalised attention and quality outcomes
+                              </p>
+                           </div>
+                        </li>
+                        <li class="ol__item">
+                           <span class="ol__number">3</span>
+                           <div class="ol__text">
+                              <p>
+                                 Access to an exclusive alumni network — stay connected to future leaders in AI security
+                              </p>
+                           </div>
+                        </li>
+                        </li>
+                     </ol>
+                  </section>
+                  <section class="course-info__section" id="course-info-dates">
+                     <h2 class="course-info__title">Cohort Dates for 2026</h2>
+                     <ul class="course-info__dates headings-list">
+                        <li class="headings-list__item">
+                           <div class="headings-list__header">
+                              <span class="headings-list__number">Cohort 1</span>
+                              <span class="headings-list__title">19 January – 15 March 2026</span>
+                           </div>
+                        </li>
+                        <li class="headings-list__item">
+                           <div class="headings-list__header">
+                              <span class="headings-list__number">Cohort 2</span>
+                              <span class="headings-list__title">13 April – 7 June 2026</span>
+                           </div>
+                        </li>
+                        <li class="headings-list__item">
+                           <div class="headings-list__header">
+                              <span class="headings-list__number">Cohort 3</span>
+                              <span class="headings-list__title">6 July – 30 August 2026</span>
+                           </div>
+                        </li>
+                        <li class="headings-list__item">
+                           <div class="headings-list__header">
+                              <span class="headings-list__number">Cohort 4</span>
+                              <span class="headings-list__title">28 September – 22 November 2026</span>
+                           </div>
+                        </li>
+                     </ul>
+                  </section>
+               </div>
+
+            </div>
+         </section>
+
+      </main>
+      @@include('html/sections/footer.htm',{})
+   </div>
+   @@include('html/add/js.htm',{})
+</body>
+
+</html>

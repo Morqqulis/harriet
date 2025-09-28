@@ -117,6 +117,12 @@
 		color: #968696;
 		text-decoration: none;
 		transition: color 0.3s ease;
+		&:hover {
+			color: $foreground;
+			text-decoration: underline;
+			text-underline-offset: rem(4);
+			text-decoration-thickness: rem(2);
+		}
 		&_active {
 			color: $foreground;
 		}
@@ -138,7 +144,7 @@
 			height: auto;
 			transition: opacity 0.3s ease;
 			opacity: 0;
-			
+
 			&.loaded {
 				opacity: 1;
 			}
@@ -177,6 +183,122 @@
 		svg {
 			width: rem(20);
 			height: rem(20);
+		}
+	}
+}
+
+.timer {
+	padding: rem(16) rem(24);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(18);
+	border: 1px solid #bfbfbf;
+	border-radius: rem(16);
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: rem(4);
+		line-height: 1;
+		font-size: rem(15);
+
+		span {
+			&:first-child {
+				@include adaptiveValue('font-size', 32, 26);
+				letter-spacing: -0.01em;
+			}
+		}
+
+		&_days {
+		}
+
+		&_hours {
+		}
+
+		&_minutes {
+		}
+
+		&_seconds {
+		}
+	}
+}
+
+.headings-list {
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue('gap', 32, 20);
+
+	&__item {
+		display: grid;
+		@include adaptiveValue('gap', 32, 20);
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue('gap', 24, 16);
+		
+
+	}
+
+	&__number {
+		text-transform: uppercase;
+		@include adaptiveValue('font-size', 15, 13);
+		letter-spacing: -0.02em;
+		background-color: $accent;
+		color: $foreground;
+		@include adaptiveValue('padding', 8, 6);
+		white-space: nowrap;
+	}
+
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue('font-size', 18, 16);
+		letter-spacing: -0.02em;
+	}
+
+	&__text {
+		p {
+			@include adaptiveValue('font-size', 18, 16);
+			line-height: 1.27;
+			letter-spacing: -0.02em;
+		}
+	}
+}
+
+.ol {
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue('gap', 32, 20);
+
+	&__item {
+		display: flex;
+		align-items: start;
+		@include adaptiveValue('gap', 16, 12);
+	}
+
+	&__number {
+		@include adaptiveValue('width', 24, 20);
+		@include adaptiveValue('height', 24, 20);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		@include adaptiveValue('font-size', 18, 14);
+		letter-spacing: -0.02em;
+		background-color: $foreground;
+		color: $background;
+		border-radius: 50%;
+	}
+
+	&__text {
+		p {
+			@include adaptiveValue('font-size', 18, 16);
+			line-height: 1.27;
+			letter-spacing: -0.02em;
 		}
 	}
 }

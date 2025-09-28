@@ -1,0 +1,107 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+//----------------------------------------------
+.course-hero {
+	@include adaptiveValue('padding-block', 64, 48);
+
+	&__container {
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue('gap', 57, 16, 1920, 1024, 3);
+		@media (max-width: $tablet) {
+			flex-direction: column-reverse;
+			@include adaptiveValue('gap', 48, 24);
+		}
+	}
+
+	&__image {
+		max-width: rem(713);
+		min-width: rem(600);
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+		@media (max-width: $tablet) {
+			min-width: auto;
+			max-width: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('gap', 32, 24);
+		max-width: rem(527);
+
+		@media (max-width: $tablet) {
+			align-items: center;
+			max-width: 100%;
+         text-align: center;
+		}
+	}
+
+	&__label {
+		text-transform: uppercase;
+		font-size: rem(15);
+		line-height: 1.4;
+		letter-spacing: -0.02em;
+	}
+
+	&__title {
+		@include adaptiveValue('font-size', 96, 64);
+		line-height: 1;
+		letter-spacing: -0.02em;
+		font-family: $fontInstrument;
+		@media (max-width: $mobile) {
+			text-wrap: balance;
+		}
+	}
+
+	&__link {
+		max-width: rem(368);
+	}
+
+	&__timer-wrapper {
+		position: relative;
+		max-width: rem(450);
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
+
+	&__timer-title {
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		background-color: $background;
+		width: 100%;
+		display: block;
+		@include adaptiveValue('max-width', 317, 240);
+		transform: translateX(-50%);
+		text-align: center;
+		height: rem(17);
+		@include adaptiveValue('font-size', 18, 14);
+		letter-spacing: -0.02em;
+		line-height: 1.4;
+	}
+
+	&__timer {
+		justify-content: space-between;
+	}
+	.timer__item {
+		span {
+			&:first-child {
+				@include adaptiveValue('font-size', 40, 32);
+				letter-spacing: -0.01em;
+				@include adaptiveValue('line-height', 70, 40);
+			}
+		}
+	}
+}
+.btn {
+}

@@ -1,0 +1,161 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+//----------------------------------------------
+.podcast-hero {
+	@include adaptiveValue('padding-bottom', 90, 60);
+	&__container {
+	}
+
+	&__header {
+		padding-block: rem(48);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		@include adaptiveValue('gap', 48, 24);
+	}
+
+	&__title {
+		font-family: $fontInstrument;
+
+		@include adaptiveValue('font-size', 130, 60);
+		line-height: 1.6;
+		letter-spacing: -0.02em;
+		text-align: center;
+		span:first-child {
+			font-family: $fontBoston;
+		}
+		span:last-child {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: rem(237);
+				height: rem(12);
+				background: url('@img/icons/line.svg') center/ contain no-repeat;
+			}
+		}
+		@media (max-width: $mobile) {
+			text-wrap: balance;
+			line-height: 1.27;
+		}
+	}
+
+	&__text {
+		max-width: rem(610);
+		@include adaptiveValue('font-size', 18, 16);
+		line-height: 1.27;
+		letter-spacing: -0.02em;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: rem(16);
+	}
+
+	&__link {
+		background-color: $accent;
+	}
+
+	&__items {
+		@include adaptiveValue('padding-top', 126, 60);
+		margin-bottom: rem(60);
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+	}
+	&__item {
+	}
+
+	.podcast-item {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(16);
+		padding-bottom: rem(31);
+		border-bottom: rem(1) solid #bfbfbf;
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+		&__content {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: rem(16);
+		}
+
+		&__info {
+			text-transform: uppercase;
+			font-size: rem(15);
+			line-height: 1.4;
+			letter-spacing: -0.02em;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: rem(8);
+			span {
+				position: relative;
+				&:not(:last-child) {
+					padding-right: rem(8);
+					&::before {
+						content: '';
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						width: rem(1);
+						height: rem(14);
+						background-color: $foreground;
+					}
+				}
+			}
+		}
+
+		&__date {
+		}
+
+		&__season {
+		}
+
+		&__episode {
+		}
+
+		&__duration {
+		}
+
+		&__title {
+			@include adaptiveValue('font-size', 36, 28);
+			line-height: 119.4%;
+			letter-spacing: -0.01em;
+			font-family: $fontInstrument;
+		}
+
+		&__btn {
+			width: fit-content;
+			padding-inline: rem(20);
+			@media (max-width: $mobileSmall) {
+				width: 100%;
+			}
+		}
+
+		&__image {
+			@media (max-width: $mobileSmall) {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.btn {
+}

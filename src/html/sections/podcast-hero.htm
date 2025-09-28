@@ -1,0 +1,80 @@
+<section class="podcast-hero">
+   <div class="podcast-hero__container">
+      <div class="podcast-hero__header">
+         <h1 class="podcast-hero__title">
+            <span class="boston">the AI</span>
+            Security <span class="instrument">Podcast</span>
+         </h1>
+         <p class="podcast-hero__text">
+            This podcast discusses all things at the intersection of AI and security. Hosted by me (Harriet Farlow aka. HarrietHacks) and Tania Sadhani and supported by Mileva Security Labs. 
+         </p>
+         <div class="podcast-hero__links">
+            <a href="#" class="podcast-hero__link btn">
+               Listen on Spotify
+               <img src="@img/icons/spotify.svg" alt="Spotify icon">
+
+            </a>
+
+            <a href="#" class="podcast-hero__link btn">
+               Listen on Buzzsprout
+               <img src="@img/icons/buzz.png" alt="Buzzsprout icon">
+            </a>
+         </div>
+      </div>
+      <div class="podcast-hero__items">
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "Agentic AI Security: A Primer",
+         "image": "img/podcast/items/item-1.jpg"
+         })
+
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "How Likely Are AI Security Incidents? Updates From Our Final Report!",
+         "image": "img/podcast/items/item-2.jpg"
+         })
+
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "To open or close model weights?",
+         "image": "img/podcast/items/item-3.jpg"
+         })
+
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "Creative prompt injection in the wild",
+         "image": "img/podcast/items/item-4.jpg"
+         })
+
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "Threat intel digest: 23 June 2025",
+         "image": "img/podcast/items/item-2.jpg"
+         })
+
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "AI safety evaluations with Inspect",
+         "image": "img/podcast/items/item-5.jpg"
+         })
+
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "Threat intel digest: 9 June 2025",
+         "image": "img/podcast/items/item-3.jpg"
+         })
+
+         @@include('../blocks/podcast-item.htm', {
+         "class": "podcast-hero__item",
+         "title": "Threat intel digest: 26 May 2025",
+         "image": "img/podcast/items/item-3.jpg"
+         })
+
+
+      </div>
+
+      @@include('../blocks/pagination.htm', {
+      "class": "podcast-hero__pagination"
+      })
+   </div>
+</section>

@@ -83,7 +83,7 @@ function recalculateAllMacy() {
 function destroyInactiveMacy() {
 	const activeTab = document.querySelector('.tabs__body:not([hidden])')
 	const activeContainer = activeTab?.querySelector('.tabs__articles')
-	
+
 	macyInstances.forEach((instance, container) => {
 		if (container !== activeContainer && instance) {
 			try {
@@ -102,19 +102,19 @@ document.addEventListener('click', e => {
 	if (e.target.closest('[data-tabs-title]')) {
 		const tabTitle = e.target.closest('[data-tabs-title]')
 		const tabsBlock = tabTitle.closest('[data-tabs]')
-		
+
 		if (tabsBlock) {
 			const currentActiveTab = tabsBlock.querySelector('.tabs__body:not([hidden])')
-			
+
 			if (currentActiveTab) {
 				currentActiveTab.style.opacity = '0'
 				currentActiveTab.style.transform = 'translateY(10px)'
 			}
-			
+
 			setTimeout(() => {
 				destroyInactiveMacy()
 				initMacyForActiveTab()
-				
+
 				const newActiveTab = tabsBlock.querySelector('.tabs__body:not([hidden])')
 				if (newActiveTab) {
 					newActiveTab.style.opacity = '1'
@@ -129,11 +129,65 @@ window.addEventListener('resize', () => {
 	if (resizeTimeout) {
 		clearTimeout(resizeTimeout)
 	}
-	
+
 	resizeTimeout = setTimeout(() => {
 		recalculateAllMacy()
 	}, 250)
 })
+
+function handleTimer(endDate) {
+	const timerDays = document.querySelectorAll('.timer__days')
+	const timerHours = document.querySelectorAll('.timer__hours')
+	const timerMinutes = document.querySelectorAll('.timer__minutes')
+	const timerSeconds = document.querySelectorAll('.timer__seconds')
+
+	const timerItems = [timerDays, timerHours, timerMinutes, timerSeconds]
+
+	if (!timerDays || !timerHours || !timerMinutes || !timerSeconds) return
+
+	const targetDate = new Date(endDate).getTime()
+
+	function updateTimer() {
+		const now = new Date().getTime()
+		const timeLeft = targetDate - now
+
+		if (timeLeft <= 0) {
+			timerItems.forEach(item => {
+				item.forEach(item => {
+					item.textContent = '0'
+				})
+			})
+			
+			return
+		}
+
+		const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
+		const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+		const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60))
+		const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
+
+		timerItems.forEach(item => {
+			item.forEach(item => {
+				item.textContent = days.toString()
+			})
+		})
+		timerHours.forEach(hour => {
+			hour.textContent = hours.toString()
+		})
+		timerMinutes.forEach(minute => {
+			minute.textContent = minutes.toString()
+		})
+		timerSeconds.forEach(second => {
+			second.textContent = seconds.toString()
+		})
+		timerDays.forEach(day => {
+			
+		})
+	}
+
+	updateTimer()
+	setInterval(updateTimer, 1000)
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	const images = document.querySelectorAll('.tabs__articles img')
@@ -147,4 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			})
 		}
 	})
+
+	handleTimer('2025-10-01')
 })

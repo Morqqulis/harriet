@@ -4,7 +4,7 @@
 	padding: 0px;
 	margin: 0px;
 	border: 0px;
-   letter-spacing: inherit;
+	letter-spacing: inherit;
 }
 *,
 *:before,
@@ -68,7 +68,8 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
-ul li {
+ul,
+ol {
 	list-style: none;
 }
 img {
