@@ -5,9 +5,8 @@
 .soon {
 	background-image: url('@img/soon/soon-bg.jpg');
 	background-repeat: no-repeat;
-	background-size: 100vw auto;
+	background-size: cover;
 	background-position: center;
-	background-color: #e8a9e0;
 
 	&_about {
 		background-image: url('@img/soon/soon-bg-about.jpg');

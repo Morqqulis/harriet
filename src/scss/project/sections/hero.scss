@@ -6,6 +6,8 @@
 	// @include adaptiveValue('gap', 156, 100, 1300, 1024);
 	display: flex;
 	align-items: center;
+	max-width: rem(2300);
+	margin-inline: auto;
 	@media (max-width: $tablet) {
 		flex-direction: column;
 	}

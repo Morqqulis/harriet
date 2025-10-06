@@ -149,9 +149,9 @@
 
 		&__image {
 			@media (max-width: $mobileSmall) {
-				img {
-					width: 100%;
-				}
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 		}
 	}

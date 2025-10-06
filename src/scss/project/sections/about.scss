@@ -3,7 +3,9 @@
 @use '../../base/mixins' as *;
 
 .about {
-	position: relative;
+max-width: rem(2000);
+margin-inline: auto;
+   position: relative;
 	@include adaptiveValue('padding-block', 126, 80);
 
 	&__img {
