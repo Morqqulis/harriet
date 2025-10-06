@@ -83,7 +83,7 @@
 		gap: rem(16);
 		padding-bottom: rem(31);
 		border-bottom: rem(1) solid #bfbfbf;
-		@media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
 		&__content {
@@ -142,17 +142,10 @@
 		&__btn {
 			width: fit-content;
 			padding-inline: rem(20);
-			@media (max-width: $mobileSmall) {
-				width: 100%;
-			}
+		
 		}
 
 		&__image {
-			@media (max-width: $mobileSmall) {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
 		}
 	}
 }
