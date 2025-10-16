@@ -1,69 +1,78 @@
 //====================================================================================================
 @use '../../base/variables' as *;
 @use '../../base/mixins' as *;
+
 //----------------------------------------------
 .soon {
-	background-image: url('@img/soon/soon-bg.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-   
+   background-color: #E8A9E0;
 
-	&_about {
-		background-image: url('@img/soon/soon-bg-about.jpg');
-	}
+   @media (max-width: $mobile) {
+      padding-bottom: rem(60);
+   }
 
-	&__container {
-		margin-bottom: rem(134);
-		width: 100%;
-	}
+   &_about {
+      background-image: url('@img/soon/soon-bg-about.jpg');
+   }
 
-	&__content {
-		display: flex;
-		align-items: center;
-		text-align: center;
-		justify-content: center;
+   &__container {}
 
-		@include adaptiveValue('gap', 79, 14);
-		min-height: rem(454);
-		width: 100%;
-		@media (min-width: rem(1800)) {
-			min-height: rem(545);
-		}
-		@media (max-width: $mobile) {
-			flex-direction: column;
-		}
-	}
+   &__content {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
 
-	&__text {
-		display: flex;
-		flex-direction: column;
-		gap: rem(16);
-		// max-width: rem(544);
+      @include adaptiveValue('gap', 79, 14);
+      min-height: rem(454);
+      width: 100%;
 
-		align-items: center;
-		@include adaptiveValue('margin-left', 150, 0, 1920, 767.98);
-	}
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
+   }
 
-	&__label {
-		font-size: rem(19);
-	}
+   &__image {
+      img {
+         width: 100%;
+         height: auto;
+      }
+   }
 
-	&__title-wrapper {
-		display: flex;
-		align-items: center;
-		gap: rem(16);
-	}
+   &__text {
+      margin-left: rem(-60);
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      // max-width: rem(544);
 
-	&__title {
-		font-family: $fontInstrument;
-		font-size: rem(48);
-	}
+      align-items: center;
+      // @include adaptiveValue('margin-left', 150, 0, 1920, 767.98);
 
-	&__btn {
-		height: fit-content;
-	}
+      @media (max-width: $mobile) {
+         margin-left: 0;
 
-	&__info {
-	}
+      }
+   }
+
+   &__label {
+      font-size: rem(19);
+   }
+
+   &__title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+   }
+
+   &__title {
+      font-family: $fontInstrument;
+      font-size: rem(48);
+   }
+
+   &__btn {
+      height: fit-content;
+      white-space: nowrap;
+   }
+
+   &__info {}
 }
