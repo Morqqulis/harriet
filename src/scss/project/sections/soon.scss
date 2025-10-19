@@ -22,7 +22,7 @@
       text-align: center;
       justify-content: center;
 
-      @include adaptiveValue('gap', 79, 14);
+      @include adaptiveValue('gap', 79, 24, );
       min-height: rem(454);
       width: 100%;
 
@@ -78,6 +78,11 @@
    &__btn {
       height: fit-content;
       white-space: nowrap;
+      min-width: fit-content;
+
+      svg {
+         min-width: fit-content;
+      }
    }
 
    &__info {}
